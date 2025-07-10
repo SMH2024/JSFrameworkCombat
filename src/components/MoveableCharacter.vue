@@ -14,7 +14,7 @@
   </character-animation>
 </template>
 <script>
-import CharacterAnimation from '@/components/CharacterAnimation';
+import CharacterAnimation from '@/components/CharacterAnimation.vue';
 import characters from '@/assets/constants/characters';
 import constants from '@/assets/constants/common';
 import transitions from '@/assets/constants/transitions';

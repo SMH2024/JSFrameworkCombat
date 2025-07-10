@@ -45,11 +45,11 @@
 
 <script>
 import { mapGetters, mapMutations } from 'vuex';
-import Player from '@/components/Player';
-import Opponent from '@/components/Opponent';
-import PlayersBars from '@/components/PlayersBars';
-import GameOver from '@/components/GameOver';
-import QuitGame from '@/components/QuitGame';
+import Player from '@/components/Player.vue';
+import Opponent from '@/components/Opponent.vue';
+import PlayersBars from '@/components/PlayersBars.vue';
+import GameOver from '@/components/GameOver.vue';
+import QuitGame from '@/components/QuitGame.vue';
 import constants from '@/assets/constants/common';
 import EventBus from '@/utils/eventBus';
 import gameAssetsService from '@/services/gameAssets.service';
@@ -83,7 +83,7 @@ export default {
       this.getPositions();
     }, constants.countdownToGameSeconds * 1000);
   },
-  destroyed() {
+  unmounted() {
     this.resetGame();
     clearInterval(this.specialAttackInterval);
   },

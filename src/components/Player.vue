@@ -7,7 +7,7 @@
   ></moveable-character>
 </template>
 <script>
-import MoveableCharacter from '@/components/MoveableCharacter';
+import MoveableCharacter from '@/components/MoveableCharacter.vue';
 import controlKeys from '@/assets/constants/controlKeys';
 import { mapMutations, mapGetters } from 'vuex';
 import EventBus from '@/utils/eventBus';
@@ -59,7 +59,7 @@ export default {
       characterType: constants.characterModes.player,
     };
   },
-  destroyed() {
+  unmounted() {
     window.removeEventListener('keydown', this.doCommand);
     window.removeEventListener('keyup', this.terminateCommand);
   },

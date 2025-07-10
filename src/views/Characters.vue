@@ -29,8 +29,8 @@
 
 <script>
 import characters from '../assets/constants/characters';
-import GameHeader from '@/components/GameHeader';
-import CharacterCard from '@/components/CharacterCard';
+import GameHeader from '@/components/GameHeader.vue';
+import CharacterCard from '@/components/CharacterCard.vue';
 import { mapGetters, mapMutations } from 'vuex';
 
 export default {

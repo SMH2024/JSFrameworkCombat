@@ -19,7 +19,7 @@
 import { mapGetters, mapMutations } from 'vuex';
 
 import characterActions from '@/assets/constants/characterActions';
-import CharacterAnimation from '@/components/CharacterAnimation';
+import CharacterAnimation from '@/components/CharacterAnimation.vue';
 
 export default {
   name: 'CharacterCard',

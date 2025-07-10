@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import Bar from './Bar';
+import Bar from './Bar.vue';
 import gameAssetsService from '@/services/gameAssets.service';
 import constants from '@/assets/constants/common';
 

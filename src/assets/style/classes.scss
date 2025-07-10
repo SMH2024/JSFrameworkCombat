@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 .game-view {
   background: $js-grey;
   -webkit-box-shadow: inset $box-shadow;

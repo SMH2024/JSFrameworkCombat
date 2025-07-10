@@ -10,7 +10,7 @@
 
 <script>
 import menuItems from '@/assets/constants/menuItems';
-import MenuItem from './MenuItem';
+import MenuItem from './MenuItem.vue';
 export default {
   name: 'GameMenu',
   components: { MenuItem },

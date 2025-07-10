@@ -1,15 +1,13 @@
-﻿import Vue from 'vue';
-import VueRouter from 'vue-router';
+﻿import { createRouter, createWebHashHistory } from 'vue-router';
 
-import Home from './views/Home';
-import Characters from './views/Characters';
-import Play from './views/Play';
-import Instructions from './views/Instructions';
+import Home from './views/Home.vue';
+import Characters from './views/Characters.vue';
+import Play from './views/Play.vue';
+import Instructions from './views/Instructions.vue';
 import store from './store';
 
-Vue.use(VueRouter);
-
-export default new VueRouter({
+export default createRouter({
+  history: createWebHashHistory(),
   routes: [
     {
       path: '/',
