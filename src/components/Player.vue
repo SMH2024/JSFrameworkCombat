@@ -7,7 +7,7 @@
   ></moveable-character>
 </template>
 <script>
-import MoveableCharacter from '@/components/MoveableCharacter.vue';
+import MoveableCharacter from '@/components/MoveableCharacter';
 import controlKeys from '@/assets/constants/controlKeys';
 import { mapMutations, mapGetters } from 'vuex';
 import EventBus from '@/utils/eventBus';

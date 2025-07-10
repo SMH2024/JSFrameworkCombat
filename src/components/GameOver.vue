@@ -2,11 +2,11 @@
   <div class="game-over-container">
     <div class="game-over-note">
       <div class="game-over-note" v-if="player.health > 0">
-        {{ player.character.name }} won!
+        {{ playerCharacterName }} won!
       </div>
       <div v-else>
         <div>Game Over!</div>
-        <div class="game-over-note">{{ enemy.character.name }} won!</div>
+        <div class="game-over-note">{{ enemyCharacterName }} won!</div>
       </div>
     </div>
     <div
@@ -46,6 +46,12 @@ export default {
   },
   computed: {
     ...mapGetters(['player', 'enemy']),
+    playerCharacterName() {
+      return this.player.character && this.player.character.name ? this.player.character.name : '';
+    },
+    enemyCharacterName() {
+      return this.enemy.character && this.enemy.character.name ? this.enemy.character.name : '';
+    },
   },
   methods: {
     ...mapMutations(['exitGame']),

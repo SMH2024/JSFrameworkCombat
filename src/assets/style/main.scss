@@ -1,7 +1,0 @@
-// Main SCSS file that imports all other styles using modern @use syntax
-@use "variables";
-@use "classes";
-@use "global";
-
-// Forward all variables for backward compatibility
-@forward "variables";

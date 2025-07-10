@@ -29,11 +29,11 @@
           ref="player"
           @attack="playerAttacked()"
           @shoot="playerShot()"
-          :character="player.character.name"
+          :character="playerCharacterName"
         ></player>
         <opponent
           ref="enemy"
-          :character="enemy.character.name"
+          :character="enemyCharacterName"
           @positionRequest="getPositions()"
           @attack="enemyAttacked()"
           @shoot="enemyShot()"
@@ -45,11 +45,11 @@
 
 <script>
 import { mapGetters, mapMutations } from 'vuex';
-import Player from '@/components/Player.vue';
-import Opponent from '@/components/Opponent.vue';
-import PlayersBars from '@/components/PlayersBars.vue';
-import GameOver from '@/components/GameOver.vue';
-import QuitGame from '@/components/QuitGame.vue';
+import Player from '@/components/Player';
+import Opponent from '@/components/Opponent';
+import PlayersBars from '@/components/PlayersBars';
+import GameOver from '@/components/GameOver';
+import QuitGame from '@/components/QuitGame';
 import constants from '@/assets/constants/common';
 import EventBus from '@/utils/eventBus';
 import gameAssetsService from '@/services/gameAssets.service';
@@ -59,6 +59,12 @@ export default {
   components: { Player, Opponent, PlayersBars, GameOver, QuitGame },
   computed: {
     ...mapGetters(['player', 'enemy', 'game']),
+    playerCharacterName() {
+      return this.player.character && this.player.character.name ? this.player.character.name : '';
+    },
+    enemyCharacterName() {
+      return this.enemy.character && this.enemy.character.name ? this.enemy.character.name : '';
+    },
   },
   data() {
     return {

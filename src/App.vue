@@ -10,7 +10,7 @@
 <script>
 import { mapGetters } from 'vuex';
 import gameAssetsService from '@/services/gameAssets.service';
-import Loader from '@/components/Loader.vue';
+import Loader from '@/components/Loader';
 export default {
   name: 'App',
   components: { Loader },

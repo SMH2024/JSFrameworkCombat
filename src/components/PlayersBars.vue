@@ -7,7 +7,7 @@
       <bar :value="player.health" :side="side"></bar>
       <bar
         :value="player.specialAttack"
-        :character="player.character.name"
+        :character="characterName"
         :side="side"
       ></bar>
     </div>
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import Bar from './Bar.vue';
+import Bar from './Bar';
 import gameAssetsService from '@/services/gameAssets.service';
 import constants from '@/assets/constants/common';
 
@@ -34,7 +34,13 @@ export default {
     },
   },
   computed: {
+    characterName: function () {
+      return this.player.character && this.player.character.name ? this.player.character.name : '';
+    },
     profilePic: function () {
+      if (!this.player.character || !this.player.character.name) {
+        return '';
+      }
       return gameAssetsService.assets.characters[
         this.side === constants.side.left ? 'players' : 'enemies'
       ][this.player.character.name].profilePic.src;

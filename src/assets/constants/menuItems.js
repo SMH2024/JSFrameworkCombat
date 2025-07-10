@@ -4,6 +4,10 @@ export default [
     link: '/characters'
   },
   {
+    label: 'Practice',
+    link: '/practice'
+  },
+  {
     label: 'Game Instructions',
     link: '/instructions'
   }

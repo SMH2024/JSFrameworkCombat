@@ -39,11 +39,11 @@
 </template>
 
 <script>
-import GameTitle from '@/components/GameTitle.vue';
-import GameMenu from '@/components/GameMenu.vue';
+import GameTitle from '@/components/GameTitle';
+import GameMenu from '@/components/GameMenu';
 import characters from '@/assets/constants/characters';
 import characterActions from '@/assets/constants/characterActions';
-import CharacterAnimation from '@/components/CharacterAnimation.vue';
+import CharacterAnimation from '@/components/CharacterAnimation';
 import constants from '@/assets/constants/common';
 
 export default {

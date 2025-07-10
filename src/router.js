@@ -1,9 +1,11 @@
 ﻿import { createRouter, createWebHashHistory } from 'vue-router';
 
-import Home from './views/Home.vue';
-import Characters from './views/Characters.vue';
-import Play from './views/Play.vue';
-import Instructions from './views/Instructions.vue';
+import Home from './views/Home';
+import Characters from './views/Characters';
+import Play from './views/Play';
+import Instructions from './views/Instructions';
+import Practice from './views/Practice';
+import PracticePlay from './views/PracticePlay';
 import store from './store';
 
 export default createRouter({
@@ -27,6 +29,16 @@ export default createRouter({
       name: 'characters',
       path: '/characters',
       component: Characters
+    },
+    {
+      name: 'practice',
+      path: '/practice',
+      component: Practice
+    },
+    {
+      name: 'practice-play',
+      path: '/practice-play',
+      component: PracticePlay
     },
     {
       path: '/play',

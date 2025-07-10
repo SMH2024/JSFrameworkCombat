@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import GameTitle from '@/components/GameTitle.vue';
+import GameTitle from '@/components/GameTitle';
 
 export default {
   name: 'GameHeader',

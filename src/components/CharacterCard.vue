@@ -19,7 +19,7 @@
 import { mapGetters, mapMutations } from 'vuex';
 
 import characterActions from '@/assets/constants/characterActions';
-import CharacterAnimation from '@/components/CharacterAnimation.vue';
+import CharacterAnimation from '@/components/CharacterAnimation';
 
 export default {
   name: 'CharacterCard',
@@ -39,7 +39,7 @@ export default {
   computed: {
     ...mapGetters(['player']),
     isSelected: function () {
-      return this.character.id === this.player.character.id;
+      return this.player.character && this.character.id === this.player.character.id;
     },
   },
   methods: {

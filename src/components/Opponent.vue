@@ -8,7 +8,7 @@
   ></moveable-character>
 </template>
 <script>
-import MoveableCharacter from '@/components/MoveableCharacter.vue';
+import MoveableCharacter from '@/components/MoveableCharacter';
 import constants from '@/assets/constants/common';
 import EventBus from '@/utils/eventBus';
 import characterActions from '@/assets/constants/characterActions';
